@@ -93,6 +93,8 @@ states = init $ map (map readBottle) [
   [[Purple, Pink, Orange, Aqua], [Orange, Lime, Yellow, Aqua], [Red, Green, Green, Orange], [Green, Blue, Blue, Yellow], [Violet, Purple, Green, Lime], [Olive, Pink, Gray, Violet], [Olive, Purple, Yellow, Lime], [Purple, Gray, Gray, Olive], [Red, Pink, Aqua, Lime], [Olive, Violet, Violet, Pink], [Aqua, Blue, Red, Yellow], [Red, Gray, Orange, Blue], [], []],
   [[Red, Green, Pink, Yellow], [Gray, Yellow, Yellow, Olive], [Aqua, Olive, Aqua, Blue], [Lime, Purple, Green, Blue], [Aqua, Olive, Violet, Red], [Lime, Yellow, Purple, Pink], [Violet, Lime, Red, Olive], [Orange, Pink, Red, Orange], [Pink, Gray, Gray, Green], [Orange, Orange, Purple, Blue], [Gray, Blue, Lime, Violet], [Purple, Green, Violet, Aqua], [], []],
   [[Purple, Green, Lime, Violet], [Red, Violet, Aqua, Blue], [Blue, Red, Olive, Purple], [Green, Orange, Pink, Violet], [Green, Pink, Yellow, Red], [Gray, Purple, Lime, Orange], [Red, Blue, Aqua, Yellow], [Gray, Lime, Olive, Violet], [Gray, Lime, Purple, Yellow], [Pink, Aqua, Olive, Orange], [Orange, Olive, Pink, Yellow], [Aqua, Blue, Gray, Green], [], []],
+  [[Yellow, Yellow, Green, Olive], [Blue, Red, Lime, Olive], [Aqua, Aqua, Green, Green], [Aqua, Brown, Blue, Lime], [Lime, Brown, Yellow, Olive], [Blue, Aqua, Orange, Gray], [Orange, Yellow, Green, Red], [Orange, Brown, Brown, Lime], [Gray, Orange, Blue, Olive], [Gray, Gray, Red, Red], [], []],
+  [[Yellow, Brown, Aqua, Olive], [Orange, Blue, Red, Purple], [Pink, Yellow, Orange, Brown], [Aqua, Yellow, Orange, Olive], [Blue, Pink, Olive, Brown], [Olive, Blue, Blue, Purple], [Brown, Red, Green, Red], [Aqua, Green, Yellow, Orange], [Purple, Aqua, Pink, Green], [Pink, Red, Green, Purple], [], []],
   []]
 
 main :: IO ()
