@@ -3,7 +3,7 @@ import Data.Set (Set, empty, insert)
 import Data.Tuple (swap)
 import System.IO (hFlush, stdout)
 
-data Color = Blank | Red | Lime | Yellow | Blue | Purple | Aqua | Gray | Green | Olive | Brown | Pink | Orange | Violet deriving (Enum)
+data Color = Blank | Red | Lime | Yellow | Blue | Purple | Aqua | Gray | Green | Olive | Brown | Pink | Orange | Violet | Cream deriving (Enum)
 
 instance Show Color where
   show Blank  = "  "
@@ -20,6 +20,7 @@ instance Show Color where
   show Pink   = "\x1b[48;5;201mPk\x1b[0m"
   show Orange = "\x1b[48;5;208mOg\x1b[0m"
   show Violet = "\x1b[48;5;097mVt\x1b[0m"
+  show Cream  = "\x1b[48;5;222mCm\x1b[0m"
 
 type Bottle = Int
 type State = [Bottle]
@@ -95,6 +96,9 @@ states = init $ map (map readBottle) [
   [[Purple, Green, Lime, Violet], [Red, Violet, Aqua, Blue], [Blue, Red, Olive, Purple], [Green, Orange, Pink, Violet], [Green, Pink, Yellow, Red], [Gray, Purple, Lime, Orange], [Red, Blue, Aqua, Yellow], [Gray, Lime, Olive, Violet], [Gray, Lime, Purple, Yellow], [Pink, Aqua, Olive, Orange], [Orange, Olive, Pink, Yellow], [Aqua, Blue, Gray, Green], [], []],
   [[Yellow, Yellow, Green, Olive], [Blue, Red, Lime, Olive], [Aqua, Aqua, Green, Green], [Aqua, Brown, Blue, Lime], [Lime, Brown, Yellow, Olive], [Blue, Aqua, Orange, Gray], [Orange, Yellow, Green, Red], [Orange, Brown, Brown, Lime], [Gray, Orange, Blue, Olive], [Gray, Gray, Red, Red], [], []],
   [[Yellow, Brown, Aqua, Olive], [Orange, Blue, Red, Purple], [Pink, Yellow, Orange, Brown], [Aqua, Yellow, Orange, Olive], [Blue, Pink, Olive, Brown], [Olive, Blue, Blue, Purple], [Brown, Red, Green, Red], [Aqua, Green, Yellow, Orange], [Purple, Aqua, Pink, Green], [Pink, Red, Green, Purple], [], []],
+  [[Orange, Purple, Blue, Lime], [Orange, Red, Gray, Lime], [Lime, Red, Green, Yellow], [Yellow, Pink, Yellow, Purple], [Green, Orange, Aqua, Gray], [Blue, Pink, Yellow, Pink], [Green, Aqua, Purple, Purple], [Red, Red, Aqua, Orange], [Lime, Blue, Blue, Aqua], [Green, Pink, Gray, Gray], [], []], -- 142
+  [[Pink, Pink, Yellow, Yellow], [Cream, Aqua, Brown, Yellow], [Lime, Lime, Aqua, Red], [Brown, Brown, Orange, Blue], [Cream, Gray, Cream, Yellow], [Aqua, Blue, Purple, Blue], [Purple, Blue, Red, Purple], [Gray, Cream, Orange, Lime], [Aqua, Pink, Orange, Orange], [Lime, Gray, Purple, Red], [Gray, Brown, Red, Pink], [], []], -- 187
+  [[Orange, Red, Yellow, Brown], [Purple, Lime, Lime, Cream], [Pink, Yellow, Blue, Gray], [Red, Red, Pink, Pink], [Blue, Aqua, Green, Orange], [Gray, Cream, Green, Blue], [Brown, Cream, Aqua, Gray], [Gray, Orange, Brown, Yellow], [Green, Pink, Purple, Cream], [Purple, Aqua, Green, Purple], [Yellow, Aqua, Blue, Brown], [Orange, Lime, Lime, Red], [], []], -- 198
   []]
 
 main :: IO ()
